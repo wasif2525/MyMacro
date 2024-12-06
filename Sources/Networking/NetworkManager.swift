@@ -7,11 +7,11 @@
 import Foundation
 
 public protocol NetworkingManagerProtocol {
-    func fetchData<T:Decodable>(url: String, modelType: T.Type) async throws -> T
+    public func fetchData<T:Decodable>(url: String, modelType: T.Type) async throws -> T
 }
 
 public class NetworkManager{
-    let urlSession: URLSession
+    public let urlSession: URLSession
     
     public init(urlSession: URLSession = URLSession.shared) {
         self.urlSession = urlSession
